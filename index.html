@@ -19,26 +19,33 @@
             <div class="home">
                 <h2>Bem vindo ao seu simulador! Obrigado pelo apoio.</h2>
                 <h3>Simulador</h3>
-                <form action="" method="">
+                <form onsubmit="getData()" method="POST">
                     <ul>
                         <li class="name">
                             <div class="txt">
-                                <label class="name-ts" for="">Nome</label>
-                                <input type="text">
+                                <label class="name-ts" for="nameInput">Nome</label>
+                                <input required autofocus id="nameInput" name="nameInput" type="text">
                             </div>
                         </li>
 
                         <li class="month-part">
                             <div class="txt">
-                                <label class="month-ts" for="">Mensalidade</label>
-                                <input type="number">
+                                <label class="month-ts" for="monthnput">Aporte Mensal</label>
+                                <input required id="monthnput" name="monthnput" type="number">
+                            </div>
+                        </li>
+
+                        <li class="tax">
+                            <div class="txt">
+                                <label class="tax-ts" for="taxInput">Taxa</label>
+                                <input required step="0.1" id="taxInput" name="taxInput" type="number" >
                             </div>
                         </li>
 
                         <li class="time">
                             <div class="txt">
-                                <label class="time-ts" for="">Tempo</label>
-                                <input type="number" name="as" id="">
+                                <label class="time-ts" for="timeInput">Tempo (meses)</label>
+                                <input required id="timeInput" name="timeInput"  type="number" >
                             </div>
                         </li>
                     </ul>
@@ -47,7 +54,11 @@
 
                 </form>
             </div>
-            <div class="ghost-answer"></div>
+        </div>
+        <div class="ghost-answer">
+                <div class="answer">
+                   
+            </div>
         </div>
     </main>
     <footer></footer>
